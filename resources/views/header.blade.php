@@ -34,8 +34,9 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a href="loginSignup"> Login/Signup</a></li>
+                            <li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a href="login"> Login</a></li>
+                            <li><a href="signup"> Sign Up</a></li>
                         </ul>
                     </div>
                 </div>

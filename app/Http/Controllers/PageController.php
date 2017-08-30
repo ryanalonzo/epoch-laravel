@@ -13,7 +13,12 @@ class PageController extends Controller
 
     function showLogin()
     {
-        return view('loginSignup');
+        return view('login');
+    }
+
+    function showSignup()
+    {
+        return view('signup');
     }
 
     function showCart()
