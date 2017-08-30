@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('epoch', function () {
-    return view('index');
-});
+Route::get('epoch', 'PageController@index');
+Route::get('loginSignup', 'PageController@showLogin');
+Route::get('cart', 'PageController@showCart');
+Route::get('products', 'PageController@showProducts');
