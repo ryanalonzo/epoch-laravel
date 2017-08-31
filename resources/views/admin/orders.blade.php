@@ -19,7 +19,7 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="orders">
+                    <a href="admin">
                         <i class="pe-7s-paperclip"></i>
                         <p>Orders</p>
                     </a>
@@ -42,5 +42,31 @@
 @endsection
 
 @section('content')
-
+    <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>Order Date</th>
+                <th>Customer Name</th>
+                <th>Address</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th colspan="2">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>dolor</td>
+              <td>sit</td>
+              <td>sit</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 @endsection

@@ -42,24 +42,20 @@
 @endsection
 
 @section('content')
-    <a href="addNewProduct"><button type="submit" class="btn btn-primary" >Add new</button></a>
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-        </tbody>
-    </table>
+    <form method="POST" action="addNewProduct" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Product Name" name="prod_name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Unit Price" name="unit_price">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Stocks" name="stocks">
+        </div>
+        <div class="form-group">
+            <input type="file" name="fileToUpload" id="fileToUpload" required>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
 @endsection

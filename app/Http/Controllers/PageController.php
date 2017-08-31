@@ -11,14 +11,14 @@ class PageController extends Controller
         return view('users.index');
     }
 
-    function showDashboard()
-    {
-        return view('admin.admin');
-    }
-
     function showAdminProducts()
     {
         return view('admin.adminProducts');
+    }
+
+    function showAddNewProduct()
+    {
+        return view('admin.addNewProduct');
     }
 
     function showUsers()
@@ -26,7 +26,7 @@ class PageController extends Controller
         return view('admin.users');
     }
 
-    function showOrders()
+    function showDashboard()
     {
         return view('admin.orders');
     }

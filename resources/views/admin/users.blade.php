@@ -19,7 +19,7 @@
 
             <ul class="nav">
                 <li>
-                    <a href="orders">
+                    <a href="admin">
                         <i class="pe-7s-paperclip"></i>
                         <p>Orders</p>
                     </a>

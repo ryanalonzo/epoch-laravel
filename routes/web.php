@@ -13,17 +13,15 @@
 
 Route::get('/', 'PageController@index');
 
-Route::get('admin', 'PageController@showDashboard');
-
 Route::get('cart', 'PageController@showCart');
 
 Route::get('products', 'PageController@showProducts');
-
 Route::get('users', 'PageController@showUsers');
-
-Route::get('orders', 'PageController@showOrders');
-
+Route::get('admin', 'PageController@showDashboard');
 Route::get('adminProducts', 'PageController@showAdminProducts');
+
+Route::get('addNewProduct', 'PageController@showAddNewProduct');
+Route::post('addNewProduct', 'ProductController@add');
 
 Route::get('create', 'AuthController@showRegisterForm');
 Route::post('create', 'AuthController@register');
