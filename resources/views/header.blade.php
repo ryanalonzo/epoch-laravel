@@ -34,9 +34,12 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
+                            @if(session('Status'))
+                                <li><p style="margin-top: 10px;">{{ session('Status') }}</p></li>
+                            @endif
                             <li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                             <li><a href="login"> Login</a></li>
-                            <li><a href="signup"> Sign Up</a></li>
+                            <li><a href="create"> Sign Up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,19 +58,6 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                    </div>
-                    <div class="mainmenu pull-left">
-                        <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="/epoch" class="active">Home</a></li>
-                            <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a href="/products">Products</a></li>
-                                    <li><a href="/cart">Cart</a></li>
-                                    <li><a href="/login">Login</a></li>
-                                    <li><a href="/signup">Sign Up</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

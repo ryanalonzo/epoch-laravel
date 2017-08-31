@@ -8,17 +8,7 @@ class PageController extends Controller
 {
     function index()
     {
-        return view('index');
-    }
-
-    function showLogin()
-    {
-        return view('login');
-    }
-
-    function showSignup()
-    {
-        return view('signup');
+        return view('users.index');
     }
 
     function showCart()

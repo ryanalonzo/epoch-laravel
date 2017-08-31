@@ -11,8 +11,16 @@
 |
 */
 
-Route::get('epoch', 'PageController@index');
-Route::get('login', 'PageController@showLogin');
-Route::get('signup', 'PageController@showSignup');
+Route::get('/', 'PageController@index');
+
 Route::get('cart', 'PageController@showCart');
+
 Route::get('products', 'PageController@showProducts');
+
+Route::get('create', 'AuthController@showRegisterForm');
+Route::post('create', 'AuthController@register');
+
+Route::get('login', 'AuthController@showLoginForm');
+Route::post('login', 'AuthController@login');
+
+
