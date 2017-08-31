@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="/epoch">EPOCH</a>
+                        <a href="/">EPOCH</a>
                     </div>
                 </div>
                 <div class="col-sm-8">
@@ -37,9 +37,18 @@
                             @if(session('Status'))
                                 <li><p style="margin-top: 10px;">{{ session('Status') }}</p></li>
                             @endif
-                            <li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            <li><a href="login"> Login</a></li>
-                            <li><a href="create"> Sign Up</a></li>
+                            @if(session('customer_id'))
+                                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                                <li><a href="products"> Products</a></li>
+                                <li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a href="logout"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a></li>
+                            @else
+                                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                                <li><a href="products"> Products</a></li>
+                                <li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                                <li><a href="create"><i class="fa fa-plus" aria-hidden="true"></i> Sign Up</a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>
