@@ -36,11 +36,6 @@ class PageController extends Controller
         return view('cart');
     }
 
-    function showProducts()
-    {
-        return view('products');
-    }
-
     function showIcons()
     {
         return view('icons');

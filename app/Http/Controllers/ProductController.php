@@ -7,6 +7,15 @@ use App\Product;
 
 class ProductController extends Controller
 {
+    function showProducts()
+    {
+        $products = Product::all();
+
+        return view('products', [
+            'products' => $products
+        ]);
+    }
+
     function add(Request $request)
     {
         $match = Product::where('prod_name', $request->prod_name)
@@ -54,6 +63,7 @@ class ProductController extends Controller
                     $product->unit_price = $request->unit_price;
                     $product->stocks = $request->stocks;
                     $product->image_src = $image;
+                    $product->description = $request->description;
 
                     $product->save();
                     return redirect('adminProducts');

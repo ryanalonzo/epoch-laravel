@@ -48,6 +48,9 @@
             <input type="text" class="form-control" placeholder="Product Name" name="prod_name">
         </div>
         <div class="form-group">
+            <input type="text" class="form-control" placeholder="Product Description" name="description">
+        </div>
+        <div class="form-group">
             <input type="text" class="form-control" placeholder="Unit Price" name="unit_price">
         </div>
         <div class="form-group">
