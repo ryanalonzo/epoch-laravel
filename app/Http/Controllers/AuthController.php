@@ -53,12 +53,15 @@ class AuthController extends Controller
                 if(password_verify($password, $u->password) && $u->user_type == 'Customer') {
                     Session::put('customer_id', $u->id);
                     return redirect('/');
+                } elseif(password_verify($password, $u->password) && $u->user_type == 'admin') {
+                    Session::put('admin_id', $u->id);
+                    return redirect('admin');
                 } else {
-                    return 'Incorrect password';
+                    return redirect('login')->with('error', 'Incorrect Password');
                 }
             }
         } else {
-            return 'User not found';
+            return redirect('login')->with('error', 'User not found');
         }
     }
 
