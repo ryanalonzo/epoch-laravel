@@ -18,7 +18,7 @@ class OrderController extends Controller
                         ->join('orders', 'users.id', '=', 'orders.customer_id')
                         ->join('order_details', 'orders.id', '=', 'order_details.order_id')
                         ->join('products', 'order_details.product_id', '=', 'products.id')
-                        ->select('users.*', 'order_details.quantity', 'orders.id', 'order_details.price', 'products.prod_name', 'orders.created_at')
+                        ->select('users.*', 'order_details.quantity', 'orders.id', 'order_details.price', 'products.prod_name', 'orders.created_at', 'orders.status')
                         ->get();
 
             return view('admin.orders', [
@@ -61,5 +61,27 @@ class OrderController extends Controller
         Session::forget('cart');
 
         return view('checkout');
+    }
+
+    function ship($id)
+    {
+        $order = Order::find($id);
+
+        $order->status = 'Shipped';
+
+        $order->save();
+
+        return redirect('admin');
+    }
+
+    function deliver($id)
+    {
+        $order = Order::find($id);
+
+        $order->status = 'Delivered';
+
+        $order->save();
+
+        return redirect('admin');
     }
 }

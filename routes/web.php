@@ -37,6 +37,9 @@ Route::get('checkout', 'OrderController@checkout');
 
 Route::get('admin', 'OrderController@showOrders');
 
+Route::get('admin/{id}/ship', 'OrderController@ship');
+Route::get('admin/{id}/deliver', 'OrderController@deliver');
+
 Route::post('create', 'AuthController@register');
 
 Route::post('login', 'AuthController@login');

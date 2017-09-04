@@ -53,7 +53,8 @@
                         <th>Product Name</th>
                         <th>Quantity</th>
                         <th>Price</th>
-                        <th colspan="2">Actions</th>
+                        <th>Status</th>
+                        <th colspan="2">Change Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,9 +66,10 @@
                             <td>{{ $order->prod_name }}</td>
                             <td>{{ $order->quantity }}</td>
                             <td>{{ $order->price }}</td>
+                            <td>{{ $order->status }}</td>
                             <td>
-                                <button>Shipped</button>
-                                <button>Delivered</button>
+                                <a href="admin/{{$order->id}}/ship"><button>Shipped</button></a>
+                                <a href="admin/{{$order->id}}/deliver"><button>Delivered</button></a>
                             </td>
                         </tr>
                     @endforeach
