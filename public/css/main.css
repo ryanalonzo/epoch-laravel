@@ -806,7 +806,6 @@ h2.title {
 .product-image-wrapper{
 	border:1px solid #F7F7F5;
 	overflow: hidden;
-	margin-bottom:30px;
 }
 
 .single-products {
@@ -1652,7 +1651,6 @@ h2.title {
   font-weight: 300;
 }
 
-
 #do_action .total_area {
   padding-bottom: 18px !important;
 }
@@ -1664,17 +1662,12 @@ h2.title {
   margin-bottom: 80px;
 }
 
-.total_area span {
-  float: right;
-}
-
-.total_area ul li {
-  background:#E6E4DF;
+.total_area h3 {
   color: #696763;
   margin-top: 10px;
   padding: 7px 20px;
+  font-family: 'Open Sans';
 }
-
 
 .user_option label {
   color: #696763;
@@ -2493,4 +2486,48 @@ h2.title {
     height: 100%;
 }
 
+.empty {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 35%;
+}
 
+.empty h1 {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.empty button {
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.empty button a {
+    font-family: "Open Sans";
+    font-weight: 300;
+    color: black;
+    text-decoration: none;
+}
+
+.complete {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 350px;
+}
+
+.complete button {
+    margin-top: 2%;
+    padding: 1%;
+}
+
+.complete button a, h2, h3 {
+    font-family: "Open Sans";
+    font-weight: 300;
+    color: black;
+    text-decoration: none;
+}

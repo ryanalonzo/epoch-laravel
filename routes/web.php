@@ -35,6 +35,8 @@ Route::get('icons', 'PageController@showIcons');
 
 Route::get('cart', 'CartController@showCart');
 
+Route::get('checkout', 'OrderController@checkout');
+
 Route::post('create', 'AuthController@register');
 
 Route::post('login', 'AuthController@login');

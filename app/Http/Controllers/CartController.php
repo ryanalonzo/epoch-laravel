@@ -14,11 +14,15 @@ class CartController extends Controller
      */
     function showCart()
     {
-        $items = array_count_values(Session::get('cart'));
+        if(count(Session::get('cart'))) {
+            $items = array_count_values(Session::get('cart'));
 
-        return view('cart', [
-            'items' => $items
-        ]);
+            return view('cart', [
+                'items' => $items
+            ]);
+        }
+
+        return view('cart');
     }
     /**
      * Add items to cart
