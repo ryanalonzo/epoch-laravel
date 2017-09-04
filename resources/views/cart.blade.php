@@ -60,7 +60,14 @@
                                         </form>
                                     </td>
                                 </tr>
-
+                            <?php
+                                if(!isset($ar)) {
+                                    $ar = [];
+                                }
+                                $od = ['prod_id' => $m->id, 'quantity' => $item, 'total' => $total];
+                                array_push($ar, $od);
+                                Session::put('order_details', $ar);
+                            ?>
                             @endforeach
                         @endforeach
                     </tbody>
