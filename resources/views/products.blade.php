@@ -11,11 +11,13 @@
                         </div>
                         <h2>{{ $product->unit_price }}</h2>
                         <p>{{ $product->prod_name }}</p>
-                        <form action="products" method="POST">
-                            <input type="submit" name="add_to_cart" value="Add to cart" class="btn btn-default add-to-cart">
-                            {{ csrf_field() }}
-                            <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
-                        </form>
+                        @if(Session::has('customer_id'))
+                            <form action="products" method="POST">
+                                <input type="submit" name="add_to_cart" value="Add to cart" class="btn btn-default add-to-cart">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="prod_id" value="<?php echo $product->id; ?>">
+                            </form>
+                        @endif
                     </div>
                 </div>
             </div>
