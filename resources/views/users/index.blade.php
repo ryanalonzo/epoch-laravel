@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('banner')
-    @include('banner');
+    @include('banner')
 @endsection
 
 @section('content')

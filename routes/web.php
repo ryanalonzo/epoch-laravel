@@ -19,8 +19,6 @@ Route::get('products', 'ProductController@showProducts');
 
 Route::get('users', 'PageController@showUsers');
 
-Route::get('admin', 'PageController@showDashboard');
-
 Route::get('adminProducts', 'PageController@showAdminProducts');
 
 Route::get('addNewProduct', 'PageController@showAddNewProduct');
@@ -36,6 +34,8 @@ Route::get('icons', 'PageController@showIcons');
 Route::get('cart', 'CartController@showCart');
 
 Route::get('checkout', 'OrderController@checkout');
+
+Route::get('admin', 'OrderController@showOrders');
 
 Route::post('create', 'AuthController@register');
 

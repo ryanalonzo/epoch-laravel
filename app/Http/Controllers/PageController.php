@@ -30,15 +30,6 @@ class PageController extends Controller
         return view('admin.users');
     }
 
-    function showDashboard()
-    {
-        if(Session::has('admin_id')) {
-            return view('admin.orders');
-        } else {
-            return view('users.index');
-        }
-    }
-
     function showCart()
     {
         return view('cart');

@@ -43,30 +43,36 @@
 
 @section('content')
     <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-                <th>Order Date</th>
-                <th>Customer Name</th>
-                <th>Address</th>
-                <th>Product Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th colspan="2">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>Lorem</td>
-              <td>ipsum</td>
-              <td>dolor</td>
-              <td>sit</td>
-              <td>sit</td>
-              <td>Edit</td>
-              <td>Delete</td>
-            </tr>
-          </tbody>
-        </table>
+        @if(count($orders))
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Order Date</th>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($orders as $order)
+                        <tr>
+                            <td>{{ $order->created_at }}</td>
+                            <td>{{ $order->first_name }} {{ $order->last_name }} </td>
+                            <td>{{ $order->address }}</td>
+                            <td>{{ $order->prod_name }}</td>
+                            <td>{{ $order->quantity }}</td>
+                            <td>{{ $order->price }}</td>
+                            <td>
+                                <button>Shipped</button>
+                                <button>Delivered</button>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @endif
     </div>
 @endsection
